@@ -1,6 +1,9 @@
 .Header{
     background-color: #4285f4;
     color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
 }
 
