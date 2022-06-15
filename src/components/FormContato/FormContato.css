@@ -1,16 +1,20 @@
-h2{
+.FormContato{
+
+}
+
+.FormContato > h2{
     margin-left: 2rem;
     margin-bottom: 1rem;
 }
 
-form{
+.FormContato > form{
     margin-left: 2rem;
 }
 
-input{
-    display: flex;
+.FormContato > label, input{
+    display: block;
     margin-bottom: 1rem;
-    padding-right: 85%;
+    width: 85%;
 }
 
 form > button{

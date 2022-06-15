@@ -1,3 +1,11 @@
 .Contato{
     margin-top: 80px;
 }
+
+.Contato .panel > h2{
+    margin-left: 2rem;
+}
+
+.Contato .panel .balls{
+
+}

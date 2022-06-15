@@ -1,0 +1,21 @@
+.Footer{
+    background-color: #5a5a5a;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.Footer > footer > p{
+    color: white;
+    align-self: center;
+    text-align: center;
+    margin-bottom: 5px;margin-bottom: 10px;
+}
+
+.Footer > footer > p > a{
+    margin-bottom: 5px;
+    color: white;
+    align-self: center;
+    text-align: center;
+    font-family: 'Roboto','Heebo',Arial,sans-serif;
+}
