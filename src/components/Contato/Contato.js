@@ -3,6 +3,7 @@ import './Contato.css';
 import TextAndTitle from '../TextAndTitle/TextAndTitle';
 import FormContato from "../FormContato/FormContato";
 import ContactBall from "../ContactBall/ContactBall";
+import Footer from "../Footer/Footer";
 
 function Contato(){
     return(
@@ -23,6 +24,7 @@ function Contato(){
 
                 </div>
             </div>
+            <Footer/>
         </div>
     );
 }

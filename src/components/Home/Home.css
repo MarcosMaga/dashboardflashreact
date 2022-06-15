@@ -1,6 +1,9 @@
 .create-chart{
     background-color: #4285f4;
-    padding: 18rem 18rem 5rem 18rem;
+    font-family: 'Roboto', Arial;
+    padding-top: 200px;
+    padding-bottom: 50px;
+    border-bottom: 1px;
 }
 
 .panel{
