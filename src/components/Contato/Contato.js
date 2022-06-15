@@ -1,10 +1,17 @@
 import React from "react";
 import './Contato.css';
+import TextAndTitle from '../TextAndTitle/TextAndTitle';
+import FormContato from "../FormContato/FormContato";
 
 function Contato(){
     return(
         <div className="Contato">
-            <h1>Esta é a Contato</h1>
+            <div className="panel">
+                <TextAndTitle title = "Contato" text="Olá, bem vindo! Sinta-se a vontade de entrar em contato por qualquer das opções a baixo."/>
+            </div>
+            <div className="panel">
+                <FormContato/>
+            </div>
         </div>
     );
 }

@@ -1,0 +1,23 @@
+h2{
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+form{
+    margin-left: 2rem;
+}
+
+input{
+    display: flex;
+    margin-bottom: 1rem;
+    padding-right: 85%;
+}
+
+form > button{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    background-color: #6099f6;
+}
