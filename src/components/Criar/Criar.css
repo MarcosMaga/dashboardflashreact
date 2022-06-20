@@ -1,0 +1,18 @@
+.Criar{
+    margin-top: 80px;
+}
+
+.Criar .panel .bt-criar{
+    display: flex;
+}
+
+.Criar .panel .bt-criar > button{
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    background-color: #6099f6;
+}
+

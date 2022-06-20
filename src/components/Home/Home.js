@@ -11,6 +11,7 @@ ChartJs.register(
 );
 
 function Home(){
+    localStorage.removeItem("newGraph");
     function ReturnData(){
         let datas = localStorage.getItem("dados");
         datas = JSON.parse(datas);
@@ -33,7 +34,6 @@ function Home(){
         return values;
     }
 
-    console.log(ReturnData());
     return(
         <div className="Home">
             <div className="create-chart">

@@ -21,7 +21,6 @@ function Contato(){
                         <ContactBall link="https://www.linkedin.com/in/marcos-magalh%C3%A3es-57a1651b4/" linkImage="https://www.spiner.com.br/wp-content/uploads/2019/02/midias-sociais-linkedin-icon.png"/>
                         <ContactBall link="https://github.com/MarcosMaga/MarcosMaga" linkImage="https://icon-library.com/images/github-icon-white/github-icon-white-16.jpg"/>
                         <ContactBall link="https://api.whatsapp.com/send?phone=5519983051888&text=Ola!+Vi+seu+Dashboard!" linkImage="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png"/>
-
                 </div>
             </div>
             <Footer/>

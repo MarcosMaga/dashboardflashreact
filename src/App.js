@@ -3,13 +3,13 @@ import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import QuemSomos from './components/QuemSomos/QuemSomos';
 import Contato from './components/Contato/Contato';
+import Criar from './components/Criar/Criar';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
-
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   function Counter(){
     const local = window.location.pathname;
-    console.log(local);
     let vetor = [];
     let contador = 0;
 
@@ -51,10 +51,12 @@ function App() {
     <div className="App" onClick={Counter}>
       <BrowserRouter>
         <Header/>
+        <Toaster/>
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/quemsomos" element={<QuemSomos/>}/>
           <Route path="/contato" element={<Contato/>}/>
+          <Route path="/criar" element={<Criar/>}/>
         </Routes>
       </BrowserRouter>
     </div>
