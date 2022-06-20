@@ -12,6 +12,9 @@ ChartJs.register(
 
 function Home(){
     localStorage.removeItem("newGraph");
+    localStorage.removeItem("dataX");
+    localStorage.removeItem("dataY");
+
     function ReturnData(){
         let datas = localStorage.getItem("dados");
         datas = JSON.parse(datas);

@@ -16,3 +16,26 @@
     background-color: #6099f6;
 }
 
+.Criar .panel .inputData{
+    visibility: hidden;
+}
+
+.Criar .panel .inputData > button{
+    margin-left: 20px;
+    margin-bottom: 15px;
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    background-color: #6099f6;
+}
+
+.Criar .panel .inputData > label{
+    margin-left: 2rem;
+    color: rgba(0,0,0,0.54);
+}
+
+.Criar .panel .inputData > input{
+    margin-left: 2rem;
+    width: 25%;
+}
+

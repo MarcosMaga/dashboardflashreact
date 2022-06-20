@@ -1,10 +1,18 @@
 import React from "react";
 import './Criar.css'
 import TextAndTitle from "../TextAndTitle/TextAndTitle";
-import * as XLSX from "xlsx"
-;
+import * as XLSX from "xlsx";
+import {useNavigate} from 'react-router-dom';
+import { doc } from "firebase/firestore";
+import { toast } from "react-hot-toast";
+
 function Criar(){
     const graphName = localStorage.getItem("newGraph");
+    const navigate = useNavigate();
+    const Plot = () => navigate('/build');
+
+    let xValues = [];
+    let yValues = [];
 
     function ReadExcel(e){
         const [file] = e.target.files;
@@ -35,6 +43,36 @@ function Criar(){
 
         localStorage.setItem("dataX", JSON.stringify(vetorX));
         localStorage.setItem("dataY", JSON.stringify(vetorY));
+        Plot();
+    }
+
+    function IniData(e){
+        const excel = document.getElementById('inputFile');
+        const inputData = document.getElementById('dataInput');
+        excel.style.visibility = 'hidden';
+        e.target.style.visibility = 'hidden';
+        inputData.style.visibility = 'visible';
+    }
+
+    function AddData(){
+        const inputX = document.getElementById('inputX');
+        const inputY = document.getElementById('inputY');
+
+        if(inputX.value != "" && inputY.value != ""){
+            xValues.push(inputX.value);
+            yValues.push(inputY.value);
+            inputX.value = "";
+            inputY.value = "";
+            toast.success = "Adicionado com sucesso";
+        }  
+        else
+            toast.error('Valores de entrada incompleto.');
+    }
+
+    function Build(){
+        localStorage.setItem('dataX', JSON.stringify(xValues));
+        localStorage.setItem('dataY', JSON.stringify(yValues));
+        Plot();
     }
 
     return(
@@ -45,9 +83,17 @@ function Criar(){
             <div className="panel">
                 <TextAndTitle title="Nome:" text={graphName}/>
                 <div className="bt-criar">
-                    <button>Inserir Dados</button>
-                    <input onChange={ReadExcel} type="file"/>
+                    <button onClick={IniData}>Inserir Dados</button>
+                    <input onChange={ReadExcel} id="inputFile" type="file"/>
                 </div>
+                <div className="inputData" id="dataInput">
+                        <label>Valor X:</label>
+                        <input id="inputX" type="text"/>
+                        <label>Valor Y:</label>
+                        <input id="inputY" type="text"/>
+                        <button onClick={AddData}>Adicionar</button>
+                        <button onClick={Build}>Montar</button>
+                    </div>
             </div>
         </div>
     );

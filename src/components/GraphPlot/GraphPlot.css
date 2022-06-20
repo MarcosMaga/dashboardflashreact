@@ -1,0 +1,12 @@
+.GraphPlot{
+    margin-top: 80px;
+}
+
+.GraphPlot .panel .buttons > button{
+    margin-left: 20px;
+    margin-bottom: 15px;
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    background-color: #6099f6;
+}

@@ -4,6 +4,7 @@ import Home from './components/Home/Home';
 import QuemSomos from './components/QuemSomos/QuemSomos';
 import Contato from './components/Contato/Contato';
 import Criar from './components/Criar/Criar';
+import GraphPlot from './components/GraphPlot/GraphPlot';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 
@@ -57,6 +58,7 @@ function App() {
           <Route path="/quemsomos" element={<QuemSomos/>}/>
           <Route path="/contato" element={<Contato/>}/>
           <Route path="/criar" element={<Criar/>}/>
+          <Route path='/build' element={<GraphPlot/>}/>
         </Routes>
       </BrowserRouter>
     </div>
