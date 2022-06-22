@@ -17,6 +17,18 @@ function Home(){
 
     function ReturnData(){
         let datas = localStorage.getItem("dados");
+
+        if(datas == null)
+        {
+          let vetor = []
+          let value = {page: 'Pagina Inicial', cliques: 1};
+          let value2 = {page: 'Contato', cliques: 0};
+          let value3 = {page: 'Quem somos?', cliques: 0};
+          vetor.push(value, value2, value3);
+          localStorage.setItem("dados", JSON.stringify(vetor));
+          datas = localStorage.getItem("dados");
+        }
+
         datas = JSON.parse(datas);
         let vetorData = [];
         let vetorLabel = []
